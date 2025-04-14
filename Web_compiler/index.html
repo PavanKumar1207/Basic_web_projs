@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>front-end-output</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+<body>
+    <div class="container">
+        <div class="left">
+            <label><img src=html-5.png> HTML:</label>
+            <textarea id="htmlcode" onkeyup="output()"></textarea>
+            <label><label><img src=social.png> HTML:</label>CSS:</label>
+            <textarea id="csscode" onkeyup="output()"></textarea>
+            <label><label><img src="js (1).png"> HTML:</label>JS:</label>
+            <textarea  id="jscode" onkeyup="output()"></textarea>
+        </div>
+        <div class="right">
+            <label>OUTPUT:</label>
+            <iframe id="output" src=""></iframe><br>
+            <img src="sun.png" id="icon">
+            <label id="name"><img src="coding.png">By Pavan </label>
+        </div>
+    </div>
+    <script>
+    function output(){
+        const htmlobj=document.getElementById("htmlcode").value;
+        const cssobj=document.getElementById("csscode").value;
+        const jsobj=document.getElementById("jscode").value;
+        const opobj=document.getElementById("output");
+        opobj.contentDocument.body.innerHTML=htmlobj+"<style>"+cssobj+"</style>";
+        opobj.contentWindow.eval(jsobj);
+    }
+    var icon = document.getElementById("icon")
+    icon.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+            icon.src="moon.png";}
+            else{
+                icon.src="sun.png";}
+        }
+</script>
+</body>
+</html>
