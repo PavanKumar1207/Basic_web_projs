@@ -1,0 +1,181 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width:100vw;
+    min-height: 100vh;
+    background-color: black;
+    overflow-x: hidden;
+    font-family: "Roboto","Arial",sans-serif;
+}
+
+.container{
+    display: grid;
+    width:100vw;
+    height: 100vh;
+    grid-template-columns: 4rem 1fr;
+    grid-template-rows: 4rem 4rem 1fr;
+    grid-template-areas: "sidebar head"
+                        " sidebar suggestions"
+                        "sidebar videos";
+    overflow-x:hidden;
+}
+ .videos{
+    grid-area:videos;
+    display: flex;
+    color:white;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    margin-left:8px;
+}
+.video{
+    width:21.7rem;
+    height:20rem;
+   position: relative;
+}
+.video #vidimg{
+    width:21.6rem;
+    height:13rem;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.video .detail{
+    display:flex;
+    column-gap: 10px;
+}
+.video #channellogo{
+    border-radius: 100%;
+    width:3.4rem;
+}
+.video #text{
+    font-size: 0.9rem;
+    font-weight:500;
+    font-family: "Roboto","Arial",sans-serif;
+}
+.video #viewsandname{
+    color:#AAAA;
+    font-size: 0.9rem;
+    font-family: "Roboto","Arial",sans-serif;
+}
+.video #time{
+    padding:5px;
+    background-color: black;
+    position: absolute;
+    font-size: 12px;
+    top:11rem;
+    font-weight: 500;
+    border-radius: 10px;
+    font-family: "Roboto","Arial",sans-serif;
+    right:1rem;
+} 
+.sidebar{
+    grid-area: sidebar;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    row-gap: 10px;
+}
+.sidebar i{
+    color:white;
+  
+}
+.sidebar label{
+    font-size: 0.7rem;
+}
+.sidebar span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    width:100%;
+    height:90px;
+    text-align: center;
+    border-radius: 10px;
+}
+.sidebar span:hover{
+    background-color: rgba(255, 255, 255, 0.267);
+    cursor: pointer;
+}
+.head{
+    grid-area: head;
+    display: flex;
+    padding:5px;
+    justify-content: space-between;
+    color:white;
+}
+.head .middle{
+    padding:5px;
+}
+.head .middle input{
+    width:450px;
+    background:transparent;
+    border:1px solid rgba(255, 255, 255, 0.486);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 40px;
+    padding-left:15px;
+    font-size: 1rem;
+    color:white;
+}
+.head .middle #glass{
+    border:1px solid rgba(255, 255, 255, 0.486);
+    padding:11.2px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+    right:5px;
+    border-left:none;
+}
+.head .middle #glass:hover{
+    background-color: rgba(255, 255, 255, 0.178);
+    cursor:pointer;
+}
+.head .middle #mic{
+    margin-left:10px;
+    padding:10px;
+    border-radius: 100%;
+}
+.head .middle #mic:hover{
+    background-color: rgba(255, 255, 255, 0.178);
+    cursor: pointer;
+}
+.head .end{
+    padding:5px;
+}
+.head .end i{
+    padding:10px;
+    margin:5px;
+    border-radius: 100%;
+}
+.head .end i:hover{
+    background-color: rgba(255, 255, 255, 0.178);
+    cursor: pointer;
+}
+.suggestions{
+    grid-area: suggestions;
+    padding:20px;
+    display: flex;
+    justify-content: space-between;
+}
+.suggestions button{
+    padding:2px;
+    background:transparent;
+    background: rgba(255, 255, 255, 0.178);
+    color:white;
+    height:1.8rem;
+    padding-left:5px;
+    padding-right:5px;
+    font-size: 0.8rem;
+    border-radius: 7px;
+    border:none;
+}
+.suggestions #all{
+    background-color: white;
+    color:black;
+}
+.suggestions button:hover{
+    background-color: rgba(255, 255, 255, 0.238);
+    cursor:pointer;
+}
